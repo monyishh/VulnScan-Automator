@@ -1,72 +1,54 @@
-🛡️ VulnScan Automator
-Automated Vulnerability Scanner using Python, Nmap, and Nikto (WSL Linux)
+# 🛡️ VulnScan Automator
+### Automated Vulnerability Scanner using Python, Nmap, and Nikto (WSL Linux)
 
-VulnScan Automator is a Python-based security scanning tool that performs automated port scanning, service enumeration, and basic web vulnerability detection using:
+VulnScan Automator is a Python-based security scanning tool that performs **automated port scanning, service enumeration, and basic web vulnerability detection** using:
 
-Nmap (for ports, services, OS detection, SSL info)
+- **Nmap** (for ports, services, OS detection, SSL info)
+- **Nikto** (for web server misconfigurations & vulnerabilities)
+- **WSL Ubuntu** (to run Linux-based scanning tools accurately)
 
-Nikto (for web server misconfigurations & vulnerabilities)
+The tool generates a **combined security report** containing Nmap & Nikto results.
 
-WSL Ubuntu (to run Linux-based scanning tools accurately)
+---
 
-The tool generates a detailed report combining Nmap and Nikto results in a timestamped text file.
+## 🚀 Features
 
-🚀 Features
+- ✔ Automated **Nmap scan**
+  - Open ports
+  - Service versions
+  - OS detection
+  - SSL issues
+  - Firewall analysis
+  
+- ✔ Automated **Nikto scan**
+  - Directory exposures
+  - Insecure headers
+  - Dangerous files
+  - Outdated server versions
+  - SSL/certificate issues
+  
+- ✔ **Report generation**
+  - Saved in `reports/`
+  - Timestamped filenames
+  - Clean combined output
 
-✔ Automated Nmap scan:
+- ✔ **WSL-based scanning** for Linux accuracy  
+- ✔ Python error-handling and safe execution
 
-Open ports
+---
 
-Service versions
+## 📦 Requirements
 
-OS detection
+### **Windows**
+- Python 3.x  
+- WSL (Ubuntu 20.04+)  
+- Git installed
 
-SSL misconfigurations
-
-Firewall analysis
-
-✔ Automated Nikto scan:
-
-Directory exposures
-
-Outdated server versions
-
-Header issues (X-Frame-Options, CSP, etc.)
-
-Dangerous files
-
-SSL checks
-
-Known vulnerability patterns
-
-✔ Report generation:
-
-Saved in /reports/ folder
-
-Timestamped
-
-Combined Nmap + Nikto results
-
-✔ WSL-based Linux scanning
-✔ Error-handling included
-
-📦 Requirements
-Windows
-
-Python 3.x
-
-WSL (Ubuntu 20.04+)
-
-Nmap installed inside Ubuntu
-
-Nikto installed inside Ubuntu
-
-Install tools inside Ubuntu
-
-Open Ubuntu terminal:
-
+### **Install tools inside Ubuntu**
+```bash
 sudo apt update
 sudo apt install nmap nikto -y
+
 
 📂 Project Structure
 VulnScan-Automator/
