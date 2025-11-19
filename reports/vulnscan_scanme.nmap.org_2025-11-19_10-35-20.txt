@@ -1,0 +1,44 @@
+=== VulnScan Automator Report ===
+Target: scanme.nmap.org
+Timestamp: 2025-11-19_10-35-20
+
+
+=== NMAP RESULTS ===
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+45.33.32.156;scanme.nmap.org;user;tcp;22;ssh;open;OpenSSH;"Ubuntu Linux; protocol 2.0";syn-ack;6.6.1p1 Ubuntu 2ubuntu2.13;10;cpe:/o:linux:linux_kernel
+45.33.32.156;scanme.nmap.org;PTR;tcp;22;ssh;open;OpenSSH;"Ubuntu Linux; protocol 2.0";syn-ack;6.6.1p1 Ubuntu 2ubuntu2.13;10;cpe:/o:linux:linux_kernel
+45.33.32.156;scanme.nmap.org;user;tcp;25;smtp;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;PTR;tcp;25;smtp;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;user;tcp;80;http;open;Apache httpd;(Ubuntu);syn-ack;2.4.7;10;cpe:/a:apache:http_server:2.4.7
+45.33.32.156;scanme.nmap.org;PTR;tcp;80;http;open;Apache httpd;(Ubuntu);syn-ack;2.4.7;10;cpe:/a:apache:http_server:2.4.7
+45.33.32.156;scanme.nmap.org;user;tcp;135;msrpc;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;PTR;tcp;135;msrpc;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;user;tcp;139;netbios-ssn;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;PTR;tcp;139;netbios-ssn;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;user;tcp;179;bgp;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;PTR;tcp;179;bgp;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;user;tcp;445;microsoft-ds;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;PTR;tcp;445;microsoft-ds;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;user;tcp;646;ldp;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;PTR;tcp;646;ldp;filtered;;;no-response;;3;
+45.33.32.156;scanme.nmap.org;user;tcp;9929;nping-echo;open;Nping echo;;syn-ack;;10;
+45.33.32.156;scanme.nmap.org;PTR;tcp;9929;nping-echo;open;Nping echo;;syn-ack;;10;
+45.33.32.156;scanme.nmap.org;user;tcp;31337;tcpwrapped;open;;;syn-ack;;8;
+45.33.32.156;scanme.nmap.org;PTR;tcp;31337;tcpwrapped;open;;;syn-ack;;8;
+
+=== NIKTO RESULTS ===
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          45.33.32.156
++ Target Hostname:    scanme.nmap.org
++ Target Port:        80
++ Start Time:         2025-11-19 05:06:01 (GMT0)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Allowed HTTP Methods: POST, OPTIONS, GET, HEAD 
++ OSVDB-3268: /images/: Directory indexing found.
++ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
++ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
++ OSVDB-3233: /icons/README: Apache default file found.

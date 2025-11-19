@@ -1,0 +1,13 @@
+=== VulnScan Automator Report ===
+Target: scanme.nma.org
+Timestamp: 2025-11-19_10-31-48
+
+
+=== NMAP RESULTS ===
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+
+=== NIKTO RESULTS ===
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ ERROR: Cannot resolve hostname 'scanme.nma.org'
++ 0 host(s) tested
